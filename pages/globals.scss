@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&family=Suez+One&display=swap');
+
+$font-family-rubik: 'Rubik', sans-serif;
+$font-family-suez-one: 'Suez One', serif;
+
+body {
+  font-family: $font-family-rubik, $font-family-suez-one;
+}
