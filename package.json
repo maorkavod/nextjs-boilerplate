@@ -25,8 +25,11 @@
     "@types/node": "^20.4.2",
     "@types/react": "^18.2.15",
     "@types/sass": "^1.45.0",
+    "autoprefixer": "^10.4.14",
     "babel-jest": "^27.5.1",
     "jest": "^27.4.7",
+    "postcss": "^8.4.26",
+    "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6"
   },
   "jest": {

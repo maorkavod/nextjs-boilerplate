@@ -3,6 +3,12 @@
 $font-family-rubik: 'Rubik', sans-serif;
 $font-family-suez-one: 'Suez One', serif;
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   font-family: $font-family-rubik, $font-family-suez-one;
+  background: linear-gradient(to bottom, black, #ff69fd);
+  height: 100vh;
 }
