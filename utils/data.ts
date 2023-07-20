@@ -8,8 +8,9 @@ import { fetchData } from './api'
  * if the request fails or the response is not OK, return an empty object
  **/
 async function getData () {
+  const URL = process.env.API_ENDPOINT
   try {
-    const data = await fetchData('https://jsonplaceholder.typicode.com/todos')
+    const data = await fetchData(URL)
     return data
   } catch (error) {
     console.error(error)
