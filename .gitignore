@@ -24,8 +24,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env*.local
+# all env files
+.env*
+
+#except .env.local Just for this demo perpose
+!/.env.local
+
 
 # vercel
 .vercel
