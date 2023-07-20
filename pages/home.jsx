@@ -1,26 +1,34 @@
-import React from 'react';
-import Button from "../components/UI/Button"
+import React from 'react'
+import { getData }  from '../utils/data'
+import PropTypes from 'prop-types';
 
 
-export default function Home({ data }) {
-    return (   
-        <div>
-            <Button/>
+export default function Home ({ data }) {
+  return (
+    <div className='flex max-w-screen-xl mx-auto'>
+      <div className='flex-1 w-30'>
+      {data.map((item) => (
+        <div key={item.id}>
+          <h1>{item.title}</h1>
+          </div>
+      ))}
+      </div>
+      <div className='flex-1 w-70'>
 
-            <h1 className="text-3xl font-bold underline">
-              Hello world!
-            </h1>
+      </div>
+      <div className='flex-1 w-30'>
+        
+      </div>
+    </div>
+  )
+}
 
-        </div>
-    )
-    // Render data...
-  }
-   
-  // This gets called on every request
-  export async function getServerSideProps() {
+export async function getServerSideProps () {
+  const data = await getData()
 
-    const data = []
-   
-    // Pass data to the page via props
-    return { props: { data } }
-  }
+  return { props: { data } }
+}
+
+Home.propTypes = {
+  data: PropTypes.array.isRequired,
+};
