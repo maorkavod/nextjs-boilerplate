@@ -5,18 +5,19 @@ import Products from '../components/UI/products'
 
 export default function Home ({ data }) {
   return (
-    <div className='flex max-w-screen-xl mx-auto'>
-      <div className='flex-1 w-30'>
+    <div className='max-w-screen-xl flex flex-wrap justify-between mx-auto'>
+      <div className='w-full md:w-1/4 p-4 bg-blue-200'></div>
+      <div className='w-full md:w-1/4 p-4 bg-red-200'>
       {/* {data.map((item) => (
         <div key={item.id}>
           <h1>{item.title}</h1>
           </div>
       ))} */}
       </div>
-      <div className='flex-1 w-70'>
+      <div className='w-full md:w-1/4 p-4 bg-blue-200'>
         <Products />
       </div>
-      <div className='flex-1 w-30'>
+      <div className='w-full md:w-1/4 p-4 bg-red-200'>
         
       </div>
     </div>
