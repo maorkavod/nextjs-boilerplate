@@ -7,7 +7,7 @@ import { fetchData } from './api'
  * 
  * if the request fails or the response is not OK, return an empty object
  **/
-async function getData () {
+async function getData (): Promise<any> {
   const URL = process.env.API_ENDPOINT
   try {
     const data = await fetchData(URL)
